@@ -1,0 +1,9 @@
+it\unipol\sample\mailservice\model\Email.class
+it\unipol\sample\mailservice\SpringSecurityConfig.class
+it\unipol\sample\mailservice\controller\TestController.class
+it\unipol\sample\mailservice\service\EmailService.class
+it\unipol\sample\mailservice\repository\EmailRepository.class
+it\unipol\sample\mailservice\ServletInitializer.class
+it\unipol\sample\mailservice\model\BaseEntity.class
+it\unipol\sample\mailservice\service\EmailServiceImpl.class
+it\unipol\sample\mailservice\controller\EmailController.class
