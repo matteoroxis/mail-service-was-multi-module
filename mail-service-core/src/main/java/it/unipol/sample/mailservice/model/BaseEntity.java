@@ -5,13 +5,14 @@
  */
 package it.unipol.sample.mailservice.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  *
  * @author matt.rossi
  */
-public class BaseEntity {
+public class BaseEntity implements Serializable {
     
     private boolean active;
     private LocalDateTime createdAt;

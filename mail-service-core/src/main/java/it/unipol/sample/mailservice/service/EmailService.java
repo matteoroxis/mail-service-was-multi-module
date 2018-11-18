@@ -6,6 +6,8 @@
 package it.unipol.sample.mailservice.service;
 
 import it.unipol.sample.mailservice.model.Email;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.util.List;
 
 /**
@@ -14,11 +16,13 @@ import java.util.List;
  */
 public interface EmailService {
 
-    public Email getEmail();
+    public Email getEmail(Long id);
 
     public List<Email> getAllEmail();
 
-    public Email saveEmail(Email email);
+    public void insertEmail(Email email);
+
+    public void insertEmailWithAttachments(Email email, MultipartFile[] uploadFiles);
 
     public void deleteEmailById(Long id);
 

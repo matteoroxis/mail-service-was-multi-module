@@ -13,10 +13,16 @@
         <!-- lookup parent from repository -->
     </parent>
     <dependencies>
-	<dependency>
+        <dependency>
             <groupId>it.unipol.sample</groupId>
             <artifactId>mail-service-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -24,7 +30,7 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
-		<dependency>
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <scope>provided</scope>

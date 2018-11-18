@@ -1,31 +1,44 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * toEmail change this license header, choose License Headers in Project Properties.
+ * toEmail change this template file, choose toEmailols | Templates
+ * and open the template in the editoEmailr.
  */
 package it.unipol.sample.mailservice.model;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- *
  * @author matt.rossi
  */
-public class Email extends BaseEntity{
-    
+public class Email extends BaseEntity {
+
     private Long id;
     private String subject;
-    private String to;
+    private String toEmail;
     private String body;
-    
-    public Email(){
+    private List<Attachment> attachments;
+
+    public Email() {
         super();
+        this.attachments = new ArrayList<Attachment>();
     }
-    
-    public Email(String subject,String to,String body){
+
+    public Email(String subject, String toEmail, String body) {
         super();
         this.subject = subject;
-        this.to = to;
+        this.toEmail = toEmail;
         this.body = body;
+        this.attachments = new ArrayList<Attachment>();
+    }
+
+    public Email(String subject, String toEmail, String body,List<Attachment> attachments) {
+        super();
+        this.subject = subject;
+        this.toEmail = toEmail;
+        this.body = body;
+        this.attachments = attachments;
     }
 
     /**
@@ -36,7 +49,7 @@ public class Email extends BaseEntity{
     }
 
     /**
-     * @param id the id to set
+     * @param id the id toEmail set
      */
     public void setId(Long id) {
         this.id = id;
@@ -50,24 +63,24 @@ public class Email extends BaseEntity{
     }
 
     /**
-     * @param subject the subject to set
+     * @param subject the subject toEmail set
      */
     public void setSubject(String subject) {
         this.subject = subject;
     }
 
     /**
-     * @return the to
+     * @return the toEmail
      */
-    public String getTo() {
-        return to;
+    public String gettoEmail() {
+        return toEmail;
     }
 
     /**
-     * @param to the to to set
+     * @param toEmail the toEmail toEmail set
      */
-    public void setTo(String to) {
-        this.to = to;
+    public void settoEmail(String toEmail) {
+        this.toEmail = toEmail;
     }
 
     /**
@@ -78,11 +91,18 @@ public class Email extends BaseEntity{
     }
 
     /**
-     * @param body the body to set
+     * @param body the body toEmail set
      */
     public void setBody(String body) {
         this.body = body;
     }
 
-    
+
+    public List<Attachment> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<Attachment> attachments) {
+        this.attachments = attachments;
+    }
 }

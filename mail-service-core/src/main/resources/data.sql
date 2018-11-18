@@ -1,2 +1,1 @@
-insert into email
-values(10001,'Test Mail', 'matt.rossi@reply.it','Buonasera, questa è una mail di prova');
+INSERT INTO "public"."email" ( "subject", "to", "body") VALUES ( 'Test Mail 2 from PostgreSQL', 'matt.rossi@reply.it', 'Buonasera, questa è una mail di prova');
